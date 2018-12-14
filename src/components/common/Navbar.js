@@ -35,7 +35,7 @@ class Navbar extends Component {
         </ul>
       )
         return(
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top">
+            <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-primary">
             {/* <img src={"../../.git.png"} alt="git" className="rounded-circle" /> */}
                 <Link className="navbar-brand" to="/">Git Cheat Sheet</Link>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">

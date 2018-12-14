@@ -11,7 +11,7 @@ export const registerUser = (user, history) => dispatch => {
 
     axios.post('https://joy-git-cheat-sheet.herokuapp.com/register', user)
             .then((res) =>{ 
-                
+               
                 notify.show(user.name + 'Has been Registered', "custom", 5000, myColor);
                 history.push(`/login`)
                
@@ -25,18 +25,20 @@ export const registerUser = (user, history) => dispatch => {
             });
 }
 
-export const loginUser = (user) => dispatch => {
+export const loginUser = (user, history) => dispatch => {
     axios.post('https://joy-git-cheat-sheet.herokuapp.com/login', user)
-            .then(res => {
+            .then((res) => {
+                
                 
                 const { token } = res.data;
+                
                 if (token){
                 localStorage.setItem('jwtToken', token);
                 setAuthToken(token);
                 const decoded = jwt_decode(token);
                 dispatch(setCurrentUser(decoded));
                 notify.show('You have successfully Logged in', "custom", 5000, myColor);
-                this.props.history.push(`/dashboard`)
+                history.push('/dashboard')
 
                 }else{
                     notify.show('Wrong Credentials', "custom", 5000, myColor);

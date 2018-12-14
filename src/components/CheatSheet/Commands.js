@@ -19,7 +19,7 @@ class Commands extends Component {
         
     }
     moveBack=()=>{
-        this.props.history.push(`/`);
+        this.props.history.push(`/dashboard`);
     }
     
     render() {

@@ -31,16 +31,13 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password,
         }
-        if(this.props.loginUser(user)){
-            this.props.history.push('/dashboard');
-        }
-        
-        
+      this.props.loginUser(user,this.props.history)  
     }
 
     componentDidMount() {
         
         if(this.props.auth.isAuthenticated) {
+
             
             this.props.history.push('/dashboard');
         }

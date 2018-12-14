@@ -109,7 +109,6 @@ class Homepage extends Component {
                             <h5 className="card-title">{cat.category}</h5>
                             <div className="card-text">
                             <button className="btn btn-outline-warning" onClick={(event)=>this.MovetoCommands(event, cat._id)}>View</button>
-                            <button className="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal2" >Edit</button>
                             <div className="modal fade" id="exampleModal2" tabIndex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -136,7 +135,7 @@ class Homepage extends Component {
                         </div>
                         </div>
 
-                            <button className="btn btn-outline-danger" >Delete</button>
+                            
                             </div>
                         </div>
                         </div>
