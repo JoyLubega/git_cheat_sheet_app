@@ -42,11 +42,11 @@ export const searchCategories = (q) => dispatch => {
 export const addCategory = (category) => dispatch => {
   axios.post(`https://joy-git-cheat-sheet.herokuapp.com/api/category`,category)
           .then(res => {
-              dispatch({
-                        type: types.ADD_CATEGORY_SUCCESS,
-                        payload: res
-                      }) 
-                      dispatch(getAllCategories()) 
+              // dispatch({
+              //           type: types.ADD_CATEGORY_SUCCESS,
+              //           payload: res
+              //         }) 
+              //         dispatch(getAllCategories()) 
                       notify.show("Category Added", "custom", 5000, myColor); 
                       this.props.history.push(`/dashboard`)
           })

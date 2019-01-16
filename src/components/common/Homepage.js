@@ -57,6 +57,7 @@ class Homepage extends Component {
     
     render() {
         const categories = this.props.allcategories
+        console.log(categories)
         return (
             <div className="container">
             <Notifications options={{zIndex: 400, top: '100px'}} />
