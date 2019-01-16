@@ -46,8 +46,9 @@ export const addCategory = (category) => dispatch => {
               //           type: types.ADD_CATEGORY_SUCCESS,
               //           payload: res
               //         }) 
-              //         dispatch(getAllCategories()) 
+              //         
                       notify.show("Category Added", "custom", 5000, myColor); 
+                      dispatch(getAllCategories()) 
                       this.props.history.push(`/dashboard`)
           })
           .catch(err => {

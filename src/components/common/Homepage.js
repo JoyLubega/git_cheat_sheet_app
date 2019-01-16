@@ -107,7 +107,7 @@ class Homepage extends Component {
                         
                         return  <div className="card">
                         <div key={cat._id} className="card-body">
-                            <h5 className="card-title">{cat.category}</h5>
+                            <h5 className="card-title"> Category:{cat.category}</h5>
                             <div className="card-text">
                             <button className="btn btn-outline-warning" onClick={(event)=>this.MovetoCommands(event, cat._id)}>View</button>
                             <div className="modal fade" id="exampleModal2" tabIndex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
